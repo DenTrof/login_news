@@ -7,10 +7,13 @@ function Header() {
     <div>
       <NavBar>
         <HeaderLink to="/">
-          Номе Page
+          Номе
         </HeaderLink>
-        <HeaderLink to="/features">
-        Features Page
+        <HeaderLink to="/news">
+        News
+        </HeaderLink>
+        <HeaderLink to="/profile">
+        Profile
         </HeaderLink>
       </NavBar>
     </div>

@@ -2,25 +2,24 @@
  *
  * App
  *
- * This component is the skeleton around the actual pages, and should only
- * contain code that should be seen on all pages. (e.g. navigation bar)
  */
 
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import styled from 'styled-components';
-import { Switch, Route } from 'react-router-dom';
+import { Switch, Route, Redirect } from 'react-router-dom';
 
-import HomePage from 'containers/HomePage/Loadable';
-import FeaturePage from 'containers/FeaturePage/Loadable';
-import NotFoundPage from 'containers/NotFoundPage/Loadable';
+import HomePage from 'containers/HomePage';
+import LoginPage from 'containers/LoginPage';
+import NewsPage from 'containers/NewsPage';
+import ProfilePage from 'containers/ProfilePage';
+import NotFoundPage from 'containers/NotFoundPage';
 import Header from 'components/Header';
 import Footer from 'components/Footer';
-
 import '../../global-styles.css';
 
 const AppWrapper = styled.div`
-  max-width: calc(768px + 16px * 2);
+  max-width: 90%;
   margin: 0 auto;
   display: flex;
   min-height: 100%;
@@ -29,6 +28,8 @@ const AppWrapper = styled.div`
 `;
 
 export default function App() {
+  const login = window.localStorage.getItem('rr_login');
+  const password = window.localStorage.getItem('rr_password');
   return (
     <AppWrapper>
       <Helmet
@@ -40,7 +41,10 @@ export default function App() {
       <Header />
       <Switch>
         <Route exact path="/" component={HomePage} />
-        <Route path="/features" component={FeaturePage} />
+        <Route path="/loging" component={LoginPage} />
+        <Route path="/news" component={NewsPage} />
+        <Route path='/profile' render={() => ( login !== 'Admin' && password !== '12345' ? 
+        <Redirect to="/loging" /> : <ProfilePage /> )} />
         <Route path="" component={NotFoundPage} />
       </Switch>
       <Footer />

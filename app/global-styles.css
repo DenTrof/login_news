@@ -1,32 +1,81 @@
+html, body {
+  height: 100%;
+  width: 100%;
+  line-height: 1.5;
+}
 
-  html,
-  body {
-    height: 100%;
-    width: 100%;
-    line-height: 1.5;
+body {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+body.fontLoaded {
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+#app {
+  background-color: #fafafa;
+  min-height: 100%;
+  min-width: 100%;
+}
+
+p, label {
+  font-family: Georgia, Times, 'Times New Roman', serif;
+  line-height: 1.5em;
+}
+
+li {
+  list-style-type: none;
+}
+
+.loging {
+  margin-left: 20%;
+  border: 2px solid green;
+  color: green;
+}
+
+#page-numbers {
+  display: flex;
+  justify-content: flex-end;
+  max-width: 200px;
+  margin-left: auto;
+}
+
+#page-numbers li {
+  padding: 0 10px 0 10px;
+  border: 2px solid;
+  margin-right: 3px;
+  border-radius: 5px;
+}
+
+.ioQxlc {
+  background-color: #dddddd;
+}
+
+.profile img {
+  width: 100%;
+}
+
+.login h3 {
+  text-align: center;
+}
+
+.login_form {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.login_form input, button {
+  margin-bottom: 20px;
+  border-radius: 5px;
+}
+
+.login_form label {
+  color: red;
+}
+
+@media (max-width: 860px) {
+  .loging {
+    margin-left: 1em;
   }
-
-  body {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  }
-
-  body.fontLoaded {
-    font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  }
-
-  #app {
-    background-color: #fafafa;
-    min-height: 100%;
-    min-width: 100%;
-  }
-
-  p,
-  label {
-    font-family: Georgia, Times, 'Times New Roman', serif;
-    line-height: 1.5em;
-  }
-
-
-
-
-
+}
