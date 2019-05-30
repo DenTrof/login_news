@@ -7,7 +7,9 @@ import { fromJS } from 'immutable';
 import { LOAD_NEWS_INFO } from "./constants";
 
 export const initialState = fromJS({
-  newsInfo: [{},],
+  newsInfo: [
+    {},
+  ],
 });
 
   function newsPageReducer(state = initialState, action) {

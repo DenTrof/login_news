@@ -19,7 +19,6 @@ import saga from "./saga";
 class NewsPage extends React.Component {
 
   state = {
-    news: ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k'],
     currentPage: 1,
     newsPerPage: 5
   };
@@ -33,7 +32,6 @@ class NewsPage extends React.Component {
   render() {
     const { currentPage, newsPerPage } = this.state;
     const { news } = this.props;
-    console.log(news);
 
     // Logic for displaying news
     const indexOfLastNews = currentPage * newsPerPage;

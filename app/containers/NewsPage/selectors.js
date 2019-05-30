@@ -7,14 +7,6 @@ import { initialState } from "./reducer";
 
 const selectNewsPageDomain = state => state.newsPage || initialState;
 
-/**
- * Other specific selectors
- */
-
-/**
- * Default selector used by NewsPage
- */
-
 const makeSelectNewsPage = () =>
   createSelector(
     selectNewsPageDomain,
